@@ -3,7 +3,7 @@ import sys
 from queue import PriorityQueue
 import time
 from random import randrange 
-from utilities import PrioQueue, ClosedQueue, SearchTree, getRandomBoard, printBoard, getLegalMoves, getCopy, doXRandomMoves, doMove
+from utilities import PrioQueue, ClosedQueue, SearchTree, getRandomBoard, printBoard, getLegalMoves, getCopy, doXRandomMoves, doMove, stringToBoard
 
 #board = [[], [], []]
 
@@ -32,7 +32,7 @@ try:
 except:
     print("Please enter a desired goal-configuration [1,2]; for example : python3 8puzzle.py 1")
     exit()
-    
+
 CONFIG = Config(GOAL_BOARD_CONFIGURATION)
 FINAL_POSITIONS = CONFIG.getFinalPositions()
 GOAL_CONFIG = CONFIG.getGoalConfig()
@@ -102,20 +102,22 @@ def findSolution(board):
 def main():
     start_time = time.time()
     
+    beginBoard = getRandomBoard()
+    if len(sys.argv) > 2:
+        beginBoard = stringToBoard(sys.argv[2])
     
-    solutionNode = findSolution(getRandomBoard())
-    #solutionNode = findSolution(doXRandomMoves(GOAL_CONFIG, 20))
-
+    
+    print("Starting-configuration : ")
+    printBoard(beginBoard)
+    print("\n------------------------------------\n")
+    
+    solutionNode = findSolution(beginBoard)
     listToParent = solutionNode.getListToParent()
 
-    print("Amout moves to solve : {}".format(len(listToParent) - 1))
-
-    print("Total Explored Nodes : {}".format(searchTree.getAmountNodes()))
-    
-
-
-    print("--- %s seconds ---" % (time.time() - start_time))
-    print("\n\n")
+    print("                  Amout moves to solve : {}".format(len(listToParent) - 1))
+    print("                  Total Explored Nodes : {}".format(searchTree.getAmountNodes()))
+    print("                  Time : %s seconds" % (time.time() - start_time))
+    print("\n------------------------------------\n")
 
     answer = input("Print moves to solution? [Y/N]")
     if answer == "y" or answer == "Y":

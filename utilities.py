@@ -1,6 +1,13 @@
 from queue import PriorityQueue
 from random import randrange 
 
+def stringToBoard(string):
+    board = [[],[],[]]
+    for i in range(3):
+        for j in range(3):
+            board[i].append(int(string[i*3+j]))
+    return board
+
 
 def getRandomBoard():
     return [[7, 2, 4], [5, 0, 6], [8, 3, 1]]
