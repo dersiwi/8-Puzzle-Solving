@@ -16,9 +16,7 @@ Configuration        Goal_1            Goal_2
  
  
 
-I implemented the search with Goal_1 as the desired Goal-Configuration (arrangeTiles.py). 
-As i later foud out, Goal_2 is very wide spread as the Goal-Configuration. So i changed my program very quickly 
-to compare my results with the ones online (8puzzleDifferentLayout.py).
+I implemented the search with Goal_1 as the desired Goal-Configuration. As i later foud out, Goal_2 is very wide spread as the Goal-Configuration.
 
 #### Benchmarks
 The following table contains the data i was interested in when developing this little program. I used the configuration above to test both programs. (21.11.2022)
@@ -32,5 +30,10 @@ The following table contains the data i was interested in when developing this l
 *the total nodes are all nodes that have been added to the tree. 
  This includes all nodes whoose children have been added to the tree, but also the ones whoose children have not been added to the tree yet.
  
- 
+ ### Usage
+ To use the program type
+ ```
+ python3 8puzzle.py [goal_config]
+ ```
+ into your terminal. [goal_config] is either 1 or 2, depending on the goal-config you want to run.
 
