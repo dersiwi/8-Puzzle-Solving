@@ -33,7 +33,23 @@ The following table contains the data i was interested in when developing this l
  ### Usage
  To use the program type
  ```
- python3 8puzzle.py [goal_config]
+ python3 8puzzle.py [goal_config] [custom_starting_configuration]
  ```
- into your terminal. [goal_config] is either 1 or 2, depending on the goal-config you want to run.
-
+ into your terminal. 
+ 
+ #### [goal_config]
+ Not optional.
+ This describes the goal-configuration you want the solver to solve for. This parameter can either be 1 or 2.
+ 1 correspondes to Goal_1 and 2 correspondes to Goal_2, as described in the Benchmark configuration.
+ 
+ #### [custom_starting_configuration]
+ Optional. 
+ Allows you to provide a custom starting configuration, a board you want to solve. 
+ Provide the numbers from 0-8 in the order you want your board to be. The 0 correspondes to the empty field.
+ Every 3 numbers, a new row on the board begins.
+ 
+ #### Example
+ ```
+ python3 8puzzle.py 1 724506831
+ ```
+ runs the solver with Goal_1 as the goal-configuration and the benchmark configuration.
