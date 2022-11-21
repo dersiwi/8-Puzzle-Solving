@@ -52,4 +52,4 @@ The following table contains the data i was interested in when developing this l
  ```
  python3 8puzzle.py 1 724506831
  ```
- runs the solver with Goal_1 as the goal-configuration and the benchmark configuration.
+ runs the solver with Goal_1 as the goal-configuration and starting configuration used as the benchmark configuration.
