@@ -40,7 +40,7 @@ The following table contains the data i was interested in when developing this l
  #### [goal_config]
  Not optional.
  This describes the goal-configuration you want the solver to solve for. This parameter can either be 1 or 2.
- 1 correspondes to Goal_1 and 2 correspondes to Goal_2, as described in the Benchmark configuration.
+ 1 correspondes to Goal_1 and 2 correspondes to Goal_2, as described in the benchmark configuration.
  
  #### [custom_starting_configuration]
  Optional. 
