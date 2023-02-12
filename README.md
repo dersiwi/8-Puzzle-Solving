@@ -28,7 +28,7 @@ The following table contains the data i was interested in when developing this p
 | time  needed                 |       0.32s   |   0.11s |
 
 *the total nodes are all nodes that have been added to the tree. 
- This includes the one that have been explored, and the ones that have not been explored yet.
+ This includes the ones that have been explored, and the ones that have not been explored yet.
  
  ### Usage
  To use the program type
