@@ -19,7 +19,7 @@ Configuration        Goal_1            Goal_2
 I implemented the search with Goal_1 as the desired Goal-Configuration. As i later foud out, Goal_2 is very wide spread as the Goal-Configuration.
 
 #### Benchmarks
-The following table contains the data i was interested in when developing this little program. I used the configuration above to test both programs. (21.11.2022)
+The following table contains the data i was interested in when developing this program. I used the configuration above to test both goal-configurations. (21.11.2022)
 
 | Category                     | Goal_1        | Goal_2  |
 | -------------------------    |:-------------:| :------:|
@@ -28,7 +28,7 @@ The following table contains the data i was interested in when developing this l
 | time  needed                 |       0.32s   |   0.11s |
 
 *the total nodes are all nodes that have been added to the tree. 
- This includes all nodes whoose children have been added to the tree, but also the ones whoose children have not been added to the tree yet.
+ This includes the one that have been explored, and the ones that have not been explored yet.
  
  ### Usage
  To use the program type
@@ -47,6 +47,8 @@ The following table contains the data i was interested in when developing this l
  Allows you to provide a custom starting configuration, a board you want to solve. 
  Provide the numbers from 0-8 in the order you want your board to be. The 0 correspondes to the empty field.
  Every 3 numbers, a new row on the board begins.
+ Notice, that a configuration that is impossible to solve (depending on the goal-confiuration) keeps the program searching
+ until it eventually explores all possible nodes - that however might take a while.
  
  #### Example
  ```
